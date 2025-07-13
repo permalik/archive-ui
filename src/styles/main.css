@@ -27,6 +27,25 @@ p {
     font-family: var(--font-header);
 }
 
+h1 {
+    font-size: 1.476rem;
+}
+h2 {
+    font-size: 1.383rem;
+}
+h3 {
+    font-size: 1.296rem;
+}
+h4 {
+    font-size: 1.215rem;
+}
+h5 {
+    font-size: 1.138rem;
+}
+h6 {
+    font-size: 1.067rem;
+}
+
 a {
     color: var(--dk);
     text-decoration: none;

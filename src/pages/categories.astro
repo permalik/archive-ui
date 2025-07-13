@@ -1,0 +1,34 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<!-- TODO: Impl sort by -->
+<Layout>
+    <ul>
+        <li class="category">
+            <a href={"/"}>
+                <h2>Dynamic Programming</h2>
+            </a>
+            <p>LeetCode, HackerRank, and Exercism -spirited problems</p>
+        </li>
+        <li class="category">
+            <a href={"/"}>
+                <h2>Pre-Algebra</h2>
+            </a>
+            <p>The basics of mathematics</p>
+        </li>
+    </ul>
+</Layout>
+
+<style>
+    .category {
+        margin: 0 0 1.5rem 0;
+    }
+    h2 {
+        margin: 0 0 0.25rem 0;
+        color: var(--pri);
+        &:hover {
+            color: var(--sec);
+        }
+    }
+</style>
