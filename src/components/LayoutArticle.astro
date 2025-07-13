@@ -1,0 +1,19 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.description}</p>
+    <p>{frontmatter.category}</p>
+    <p>Written by {frontmatter.author}</p>
+    <p>
+        <span>Created: {frontmatter.created}</span>
+        <span>Updated: {frontmatter.updated}</span>
+    </p>
+    <ul>
+        {frontmatter.tags.map((tag: any) => <li>{tag}</li>)}
+    </ul>
+    <slot />
+</Layout>

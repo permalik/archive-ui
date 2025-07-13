@@ -1,0 +1,56 @@
+---
+import Layout from "../components/Layout.astro";
+const articles = Object.values(
+    import.meta.glob("./articles/*.md", { eager: true }),
+);
+---
+
+<!-- TODO: Impl sort by -->
+<Layout>
+    {
+        articles
+            .sort(
+                (a: any, b: any) =>
+                    new Date(a.frontmatter.created).getTime() -
+                    new Date(b.frontmatter.created).getTime(),
+            )
+            .map((article: any) => (
+                <li class="article">
+                    <a href={article.url}>
+                        <h2>
+                            {article.frontmatter.created.slice(0, 10)}:{" "}
+                            {article.frontmatter.title}
+                        </h2>
+                    </a>
+                    <p>{article.frontmatter.description}</p>
+                    <ul>
+                        {article.frontmatter.tags.sort().map((tag: any) => (
+                            <li>#{tag}</li>
+                        ))}
+                    </ul>
+                </li>
+            ))
+    }
+</Layout>
+
+<style>
+    .article {
+        margin: 0 0 1.5rem 0;
+    }
+    h2 {
+        margin: 0 0 0.25rem 0;
+        color: var(--pri);
+        &:hover {
+            color: var(--sec);
+        }
+    }
+    p {
+        margin: 0 0 0.5rem 0;
+    }
+    ul {
+        display: flex;
+        & > li:not(:first-child) {
+            margin: 0 0 0 0.5rem;
+        }
+    }
+</style>

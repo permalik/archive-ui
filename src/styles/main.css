@@ -1,0 +1,52 @@
+:root {
+    --dk: hsl(210, 30%, 4%);
+    --lt: hsl(210, 30%, 96%);
+    --pri: hsl(210, 28%, 40%);
+    --sec: hsl(12, 67%, 38%);
+}
+
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--dk);
+    background-color: var(--lt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-header);
+}
+
+a {
+    color: var(--dk);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--sec);
+        text-decoration: underline;
+    }
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+pre {
+    padding: 0.5rem;
+}
