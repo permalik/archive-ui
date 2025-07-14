@@ -1,0 +1,22 @@
+---
+const { name, desc, link } = Astro.props;
+---
+
+<li>
+    <h4>
+        <a href={link}>{name}</a>
+    </h4>
+    <p>{desc}</p>
+</li>
+
+<style>
+    li {
+        margin: 0 0 1rem;
+    }
+    a {
+        color: var(--pri);
+        &:hover {
+            color: var(--sec);
+        }
+    }
+</style>

@@ -9,13 +9,20 @@ const tags = [
 ---
 
 <Layout>
+    <h1>Article Tags</h1>
     <section>
         {
             tags.sort().map((tag) => (
                 <p>
-                    <a href={`/tags/${tag.toLowerCase()}`}>{tag}</a>
+                    <a href={`/tags/${tag}`}>{tag}</a>
                 </p>
             ))
         }
     </section>
 </Layout>
+
+<style>
+    p {
+        margin: 0 0 0.25rem 0;
+    }
+</style>

@@ -8,12 +8,33 @@ const { frontmatter } = Astro.props;
     <p>{frontmatter.description}</p>
     <p>{frontmatter.category}</p>
     <p>Written by {frontmatter.author}</p>
-    <p>
-        <span>Created: {frontmatter.created}</span>
-        <span>Updated: {frontmatter.updated}</span>
+    <p class="timestamp">
+        <span>Created: {frontmatter.created.slice(0, 10)}</span>
+        <span>Updated: {frontmatter.updated.slice(0, 10)}</span>
     </p>
-    <ul>
-        {frontmatter.tags.map((tag: any) => <li>{tag}</li>)}
+    <ul class="tags">
+        {
+            frontmatter.tags.map((tag: any) => (
+                <li>
+                    <a href={`/tags/${tag}`}>#{tag}</a>
+                </li>
+            ))
+        }
     </ul>
     <slot />
 </Layout>
+
+<style>
+    .timestamp {
+        & > span {
+            display: block;
+        }
+    }
+
+    .tags {
+        display: flex;
+        & > li:not(:first-child) {
+            margin: 0 0 0 0.5rem;
+        }
+    }
+</style>

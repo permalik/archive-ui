@@ -4,5 +4,104 @@ import Layout from "../components/Layout.astro";
 
 <Layout>
     <h1>Hello</h1>
-    <p>I am Ty Malik, a programmer</p>
+    <section>
+        <p>
+            I am Ty Malik, a programmer focused on language processing and
+            tooling. View my resume <a
+                href="https://tymalik-swe.com/"
+                class="link">here</a
+            >.
+        </p>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        <p>
+            <span class="experience-title">Revenue Management Solutions</span>
+            <span class="experience-subtitle">FROM 2024-06</span>
+            I was recruited to work as a devops engineer at an industry-leading healthcare
+            remittance processing and reconciliation company in 2024. We automated
+            the consolidation of healthcare providers' data for corporate financial
+            institutions. Our on-premises Linux and Windows infrastructure hosted
+            around a hundred applications built with Java, C#, Visual Basic, Python,
+            with manual and automated deployments using hand-rolled scripts or Ansible.
+        </p>
+        <p>
+            <span class="experience-title"
+                >WPAIntelligence (Pulse Decision Science)</span
+            >
+            <span class="experience-subtitle">FROM 2022-09 TO 2024-06</span>
+            I was hired as a software engineer at a major political polling firm.
+            Our SaaS platforms provided an analytics warehouse, query tooling, high-volume
+            SMS messaging, and mobile voter canvassing applications for state and
+            federal campaigns using VueJS, NodeJS, Rust, and React Native.
+        </p>
+        <p>
+            <span class="experience-title">Origin</span>
+            I began programming in 2019 with the goal of creating online businesses.
+            I began with WordPress, quickly realized limitations, then learned HTML,
+            CSS, JavaScript, and JavaScript frameworks.
+        </p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <p>
+            I am building <a href="/projects" class="link"
+                >a cross-platform toolkit</a
+            > among other projects.
+        </p>
+    </section>
+    <section>
+        <h2>University</h2>
+        <p>
+            I aim to complete my BCompSC from Western Governors University over
+            the next 12 to 18 months.
+        </p>
+    </section>
+    <section>
+        <h2 id="curricula">Self-Taught Curricula</h2>
+        <p>
+            I follow the book list from <a href="https://teachyourselfcs.com/"
+                >teachyourselfcs.com</a
+            > and additional selections I've found along the way. A list of completed
+            books or those I'm actively reading can be found <a
+                href="/books"
+                class="link">here</a
+            >.
+        </p>
+    </section>
+    <section>
+        <h2>Mathematics</h2>
+        <p>
+            I work on mathematics everyday as I work toward my degree but also
+            from sheer curiosity and love of problem solving.
+        </p>
+    </section>
 </Layout>
+
+<style>
+    .link {
+        color: var(--pri);
+    }
+    section:not(:last-of-type) {
+        margin: 0 0 2rem 0;
+    }
+    h2,
+    h3 {
+        margin: 0 0 0.25rem 0;
+    }
+    .experience-title {
+        display: block;
+        font-weight: 500;
+    }
+    .experience-subtitle {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 500;
+        opacity: 0.7;
+    }
+    p {
+        margin: 0 0 0.5rem 0;
+    }
+</style>

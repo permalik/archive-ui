@@ -1,4 +1,5 @@
 ---
+import Article from "../components/Article.astro";
 import Layout from "../components/Layout.astro";
 const articles = Object.values(
     import.meta.glob("./articles/*.md", { eager: true }),
@@ -7,6 +8,7 @@ const articles = Object.values(
 
 <!-- TODO: Impl sort by -->
 <Layout>
+    <h1>Articles</h1>
     {
         articles
             .sort(
@@ -14,43 +16,6 @@ const articles = Object.values(
                     new Date(a.frontmatter.created).getTime() -
                     new Date(b.frontmatter.created).getTime(),
             )
-            .map((article: any) => (
-                <li class="article">
-                    <a href={article.url}>
-                        <h2>
-                            {article.frontmatter.created.slice(0, 10)}:{" "}
-                            {article.frontmatter.title}
-                        </h2>
-                    </a>
-                    <p>{article.frontmatter.description}</p>
-                    <ul>
-                        {article.frontmatter.tags.sort().map((tag: any) => (
-                            <li>#{tag}</li>
-                        ))}
-                    </ul>
-                </li>
-            ))
+            .map((a: any) => <Article article={a} />)
     }
 </Layout>
-
-<style>
-    .article {
-        margin: 0 0 1.5rem 0;
-    }
-    h2 {
-        margin: 0 0 0.25rem 0;
-        color: var(--pri);
-        &:hover {
-            color: var(--sec);
-        }
-    }
-    p {
-        margin: 0 0 0.5rem 0;
-    }
-    ul {
-        display: flex;
-        & > li:not(:first-child) {
-            margin: 0 0 0 0.5rem;
-        }
-    }
-</style>

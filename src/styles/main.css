@@ -5,6 +5,10 @@
     --sec: hsl(12, 67%, 38%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-width: 100%;
     min-height: 100vh;
@@ -26,9 +30,19 @@ p {
     padding: 0;
     font-family: var(--font-header);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
 
 h1 {
+    margin: 0 0 2rem 0;
     font-size: 1.476rem;
+    font-weight: 600;
 }
 h2 {
     font-size: 1.383rem;

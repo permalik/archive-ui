@@ -1,0 +1,81 @@
+---
+import Layout from "../components/Layout.astro";
+import Project from "../components/Project.astro";
+import { productYyyoink, productBlue } from "../data/product.js";
+import { construct } from "../data/construct.js";
+import { homelab } from "../data/homelab.js";
+import { sandbox } from "../data/sandbox.js";
+---
+
+<Layout>
+    <h1>Projects</h1>
+    <section>
+        <h2>YYYoink</h2>
+        <p>Cross-platform tooling with personal LLM chat functionality.</p>
+        <hr />
+        <ul>
+            {
+                productYyyoink.map((p: any) => (
+                    <Project name={p.name} desc={p.desc} link={p.link} />
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2>Blue</h2>
+        <p>Observability platform for logging and metrics.</p>
+        <hr />
+        <ul>
+            {
+                productBlue.map((p: any) => (
+                    <Project name={p.name} desc={p.desc} link={p.link} />
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2>Construct</h2>
+        <p>Project-based computer science and programming curriculum.</p>
+        <hr />
+        <ul>
+            {
+                construct.map((c: any) => (
+                    <Project name={c.name} desc={c.desc} link={c.link} />
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2>Homelab</h2>
+        <p>Configuration, integrations, and automation</p>
+        <hr />
+        <ul>
+            {
+                homelab.map((h: any) => (
+                    <Project name={h.name} desc={h.desc} link={h.link} />
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2>Sandbox</h2>
+        <p>Per-language Nix shells</p>
+        <hr />
+        <ul>
+            {
+                sandbox.map((s: any) => (
+                    <Project name={s.name} desc={s.desc} link={s.link} />
+                ))
+            }
+        </ul>
+    </section>
+</Layout>
+
+<style>
+    h2 {
+        margin: 0 0 0.25rem 0;
+    }
+    section:not(:last-of-type) {
+        margin: 0 0 2rem 0;
+    }
+</style>
