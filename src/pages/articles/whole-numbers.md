@@ -5,10 +5,9 @@ title: Whole Numbers
 description: Pre-Algebra
 created: 2025-05-26
 updated: 2025-05-26
-category: [
-    Mathematics
-]
+category: Mathematics
 tags: [
+  PreAlgebra,
   WholeNumbers,
 ]
 ---

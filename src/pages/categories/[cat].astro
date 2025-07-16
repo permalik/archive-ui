@@ -1,0 +1,32 @@
+---
+import Article from "../../components/Article.astro";
+import Layout from "../../components/Layout.astro";
+
+export async function getStaticPaths() {
+    const articles = Object.values(
+        import.meta.glob("../articles/*.md", { eager: true }),
+    );
+    const cats = [
+        ...new Set(articles.map((a: any) => a.frontmatter.category).flat()),
+    ];
+    return cats.map((cat: any) => {
+        const filteredArticles = articles.filter((a: any) =>
+            a.frontmatter.category.includes(cat),
+        );
+        return {
+            params: { cat },
+            props: { articles: filteredArticles },
+        };
+    });
+}
+
+const { cat } = Astro.params;
+const { articles } = Astro.props;
+---
+
+<Layout>
+    <h1>{cat}</h1>
+    <ul>
+        {articles.map((a: any) => <Article article={a} />)}
+    </ul>
+</Layout>

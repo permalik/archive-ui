@@ -1,14 +1,15 @@
 ---
 layout: ../../components/LayoutArticle.astro
-author: Ty Malik
 title: LeetCode 0001 Two Sum
+author: Ty Malik
 created: 2025-05-25
 updated: 2025-05-25
 description: Dynamic Programming
 category: Programming
 tags: [
+    C,
+    DynamicProgramming,
     LeetCode,
-    C
 ]
 ---
 

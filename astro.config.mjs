@@ -19,6 +19,14 @@ export default defineConfig({
         weights: [400, 500, 600, 700, 800, 900],
         fallbacks: ["serif"],
       },
+      // TODOO: Broken. Fix.
+      // {
+      //   provider: fontProviders.fontshare(),
+      //   name: "JetBrains Mono",
+      //   cssVariable: "--font-mono",
+      //   weights: [400, 500, 600, 700, 800, 900],
+      //   fallbacks: ["serif"],
+      // },
     ],
   },
 });

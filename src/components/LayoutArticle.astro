@@ -1,40 +1,71 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
+import "../styles/article-content.css";
 ---
 
 <Layout>
-    <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.description}</p>
-    <p>{frontmatter.category}</p>
-    <p>Written by {frontmatter.author}</p>
-    <p class="timestamp">
-        <span>Created: {frontmatter.created.slice(0, 10)}</span>
-        <span>Updated: {frontmatter.updated.slice(0, 10)}</span>
-    </p>
-    <ul class="tags">
-        {
-            frontmatter.tags.map((tag: any) => (
-                <li>
-                    <a href={`/tags/${tag}`}>#{tag}</a>
-                </li>
-            ))
-        }
-    </ul>
-    <slot />
+    <header class="article-header">
+        <h1 class="article-heading">{frontmatter.title}</h1>
+        <p>{frontmatter.description}</p>
+        <p class="article-category">
+            <a href={`/categories/${frontmatter.category}`}>
+                {frontmatter.category.toUpperCase()}
+            </a>
+        </p>
+        <ul class="tags">
+            {
+                frontmatter.tags.map((tag: any) => (
+                    <li>
+                        <a href={`/tags/${tag}`}>#{tag}</a>
+                    </li>
+                ))
+            }
+        </ul>
+        <section class="credit">
+            <img src="/avatar.png" alt="robot avatar" class="credit-image" />
+            <div>
+                <p>{frontmatter.author}</p>
+                <div>
+                    {frontmatter.created.slice(0, 10)} ⎯ {
+                        frontmatter.updated.slice(0, 10)
+                    }
+                </div>
+            </div>
+        </section>
+    </header>
+    <div id="article-content">
+        <slot />
+    </div>
 </Layout>
 
 <style>
-    .timestamp {
-        & > span {
-            display: block;
+    .article-header {
+        margin: 0 0 2rem 0;
+        & .article-heading {
+            margin: 0;
+        }
+        & .article-category {
+            font-size: 0.9rem;
+            font-weight: 700;
+            opacity: 0.6;
         }
     }
 
     .tags {
+        margin: 0 0 1rem 0;
         display: flex;
         & > li:not(:first-child) {
             margin: 0 0 0 0.5rem;
+        }
+    }
+
+    .credit {
+        display: flex;
+        & .credit-image {
+            width: 50px;
+            height: 50px;
+            margin: 0 1rem 0 0;
         }
     }
 </style>

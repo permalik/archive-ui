@@ -1,0 +1,43 @@
+---
+import Layout from "../components/Layout.astro";
+import { links } from "../data/links.js";
+---
+
+<Layout>
+    <h1>Links</h1>
+    <ul>
+        {
+            links.map((link: any) => (
+                <li class="topic">
+                    <h2>{link.topic}</h2>
+                    <ul class="list">
+                        {link.items.map((item: any) => (
+                            <li class="item">
+                                <p>{item.name}</p>
+                                <a href={item.url}>{item.url}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
+
+<style>
+    .topic {
+        margin: 0 0 1rem 0;
+        & h2 {
+            margin: 0 0 0.25rem 0;
+            color: var(--pri);
+        }
+    }
+    .list {
+        & .item:not(:last-child) {
+            margin: 0 0 0.5rem 0;
+        }
+    }
+    .item p {
+        font-weight: 600;
+    }
+</style>
