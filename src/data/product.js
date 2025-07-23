@@ -1,19 +1,19 @@
 export const productYyyoink = [
   {
-    name: "yyyoink avalonia",
-    desc: "Cross-platform toolkit for Windows and Linux",
-    link: "https://github.com/sunsplitstudio/yyyoink-avalonia",
+    name: "yyyoink desktop",
+    desc: "Cross-platform toolkit for MacOS, Windows, and Linux",
+    link: "https://github.com/sunsplitstudio/yyyoink-desktop",
   },
-  {
-    name: "yyyoink apple",
-    desc: "Cross-platform toolkit for MacOS and iOS",
-    link: "https://github.com/sunsplitstudio/yyyoink-apple",
-  },
-  {
-    name: "yyyoink android",
-    desc: "Cross-platform toolkit for Android",
-    link: "https://github.com/sunsplitstudio/yyyoink-android",
-  },
+  //{
+  //  name: "yyyoink apple",
+  //  desc: "Cross-platform toolkit for iOS",
+  //  link: "https://github.com/sunsplitstudio/yyyoink-apple",
+  //},
+  //{
+  //  name: "yyyoink android",
+  //  desc: "Cross-platform toolkit for Android",
+  //  link: "https://github.com/sunsplitstudio/yyyoink-android",
+  //},
   {
     name: "yyyoink core",
     desc: "Cross-platform toolkit core",
@@ -25,9 +25,14 @@ export const productYyyoink = [
     link: "https://github.com/permalik/yyyoink-api",
   },
   {
-    name: "yyyoink pipeline",
-    desc: "Cross-platform toolkit LLM processing pipeline",
-    link: "https://github.com/permalik/yyyoink-pipeline",
+    name: "yyyoink preprocess",
+    desc: "Cross-platform toolkit LLM preprocess",
+    link: "https://github.com/permalik/yyyoink-preprocess",
+  },
+  {
+    name: "yyyoink dispatch",
+    desc: "Cross-platform toolkit LLM scheduler",
+    link: "https://github.com/permalik/yyyoink-dispatch",
   },
   {
     name: "yyyoink llm",
@@ -35,15 +40,40 @@ export const productYyyoink = [
     link: "https://github.com/permalik/yyyoink-llm",
   },
   {
-    name: "yyyoink portal",
-    desc: "Cross-platform toolkit marketing and user management",
-    link: "https://github.com/sunsplitstudio/yyyoink-portal",
+    name: "yyyoink postprocess",
+    desc: "Cross-platform toolkit LLM postprocess",
+    link: "https://github.com/permalik/yyyoink-postprocess",
   },
   {
-    name: "yyyoink bff",
-    desc: "Cross-platform toolkit backend for frontend",
-    link: "https://github.com/sunsplitstudio/yyyoink-bff",
+    name: "yyyoink feedback",
+    desc: "Cross-platform toolkit LLM feedback",
+    link: "https://github.com/permalik/yyyoink-feedback",
   },
+  {
+    name: "yyyoink ws",
+    desc: "Cross-platform toolkit LLM websocket server",
+    link: "https://github.com/permalik/yyyoink-ws",
+  },
+  {
+    name: "yyyoink command",
+    desc: "Cross-platform toolkit LLM write service",
+    link: "https://github.com/permalik/yyyoink-command",
+  },
+  {
+    name: "yyyoink query",
+    desc: "Cross-platform toolkit LLM read service",
+    link: "https://github.com/permalik/yyyoink-query",
+  },
+  //{
+  //  name: "yyyoink portal",
+  //  desc: "Cross-platform toolkit marketing and user management",
+  //  link: "https://github.com/sunsplitstudio/yyyoink-portal",
+  //},
+  //{
+  //  name: "yyyoink bff",
+  //  desc: "Cross-platform toolkit backend for frontend",
+  //  link: "https://github.com/sunsplitstudio/yyyoink-bff",
+  //},
 ];
 
 export const productBlue = [
