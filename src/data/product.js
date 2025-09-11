@@ -1,95 +1,70 @@
-export const productYyyoink = [
+export const productlark = [
   {
-    name: "yyyoink desktop",
-    desc: "Cross-platform toolkit for MacOS, Windows, and Linux",
-    link: "https://github.com/sunsplitstudio/yyyoink-desktop",
+    name: "lark web",
+    desc: "LLM web",
+    link: "https://github.com/permalik/lark-web",
   },
   //{
-  //  name: "yyyoink apple",
-  //  desc: "Cross-platform toolkit for iOS",
-  //  link: "https://github.com/sunsplitstudio/yyyoink-apple",
+  //  name: "lark apple",
+  //  desc: "LLM iOS",
+  //  link: "https://github.com/permalik/lark-apple",
   //},
   //{
-  //  name: "yyyoink android",
-  //  desc: "Cross-platform toolkit for Android",
-  //  link: "https://github.com/sunsplitstudio/yyyoink-android",
+  //  name: "lark android",
+  //  desc: "LLM Android",
+  //  link: "https://github.com/permalik/lark-android",
   //},
   {
-    name: "yyyoink core",
-    desc: "Cross-platform toolkit core",
-    link: "https://github.com/sunsplitstudio/yyyoink-core",
+    name: "lark api",
+    desc: "LLM API and WS",
+    link: "https://github.com/permalik/lark-api",
   },
   {
-    name: "yyyoink api",
-    desc: "Cross-platform toolkit APIs",
-    link: "https://github.com/permalik/yyyoink-api",
+    name: "lark pipeline",
+    desc: "LLM pipeline",
+    link: "https://github.com/permalik/lark-pipeline",
   },
   {
-    name: "yyyoink preprocess",
-    desc: "Cross-platform toolkit LLM preprocess",
-    link: "https://github.com/permalik/yyyoink-preprocess",
+    name: "lark llm",
+    desc: "LLM core",
+    link: "https://github.com/permalik/lark-llm",
   },
   {
-    name: "yyyoink dispatch",
-    desc: "Cross-platform toolkit LLM scheduler",
-    link: "https://github.com/permalik/yyyoink-dispatch",
+    name: "lark command",
+    desc: "LLM write service",
+    link: "https://github.com/permalik/lark-command",
   },
   {
-    name: "yyyoink llm",
-    desc: "Cross-platform toolkit LLM core",
-    link: "https://github.com/permalik/yyyoink-llm",
+    name: "lark query",
+    desc: "LLM read service",
+    link: "https://github.com/permalik/lark-query",
   },
-  {
-    name: "yyyoink postprocess",
-    desc: "Cross-platform toolkit LLM postprocess",
-    link: "https://github.com/permalik/yyyoink-postprocess",
-  },
-  {
-    name: "yyyoink feedback",
-    desc: "Cross-platform toolkit LLM feedback",
-    link: "https://github.com/permalik/yyyoink-feedback",
-  },
-  {
-    name: "yyyoink ws",
-    desc: "Cross-platform toolkit LLM websocket server",
-    link: "https://github.com/permalik/yyyoink-ws",
-  },
-  {
-    name: "yyyoink command",
-    desc: "Cross-platform toolkit LLM write service",
-    link: "https://github.com/permalik/yyyoink-command",
-  },
-  {
-    name: "yyyoink query",
-    desc: "Cross-platform toolkit LLM read service",
-    link: "https://github.com/permalik/yyyoink-query",
-  },
-  //{
-  //  name: "yyyoink portal",
-  //  desc: "Cross-platform toolkit marketing and user management",
-  //  link: "https://github.com/sunsplitstudio/yyyoink-portal",
-  //},
-  //{
-  //  name: "yyyoink bff",
-  //  desc: "Cross-platform toolkit backend for frontend",
-  //  link: "https://github.com/sunsplitstudio/yyyoink-bff",
-  //},
 ];
 
 export const productBlue = [
   {
     name: "blue web",
-    desc: "Log management and analytics for web",
+    desc: "Log management and analytics web",
     link: "https://github.com/permalik/blue-web",
   },
   {
-    name: "blue bff",
-    desc: "Log management backend for frontend",
-    link: "https://github.com/permalik/blue-bff",
+    name: "blue api",
+    desc: "Log management and analytics API",
+    link: "https://github.com/permalik/blue-api",
   },
   {
     name: "blue core",
     desc: "Log management and analytics core",
     link: "https://github.com/permalik/blue-core",
+  },
+  {
+    name: "blue write",
+    desc: "Log management and analytics write service",
+    link: "https://github.com/permalik/blue-write",
+  },
+  {
+    name: "blue rust",
+    desc: "Shared log management and analytics library",
+    link: "https://github.com/permalik/blue-rust",
   },
 ];
