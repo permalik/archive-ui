@@ -1,7 +1,7 @@
 ---
 import Layout from "../components/Layout.astro";
 import Project from "../components/Project.astro";
-import { productYyyoink, productBlue } from "../data/product.js";
+import { productLark, productBlue } from "../data/product.js";
 import { construct } from "../data/construct.js";
 import { homelab } from "../data/homelab.js";
 import { sandbox } from "../data/sandbox.js";
@@ -15,7 +15,7 @@ import { sandbox } from "../data/sandbox.js";
         <hr />
         <ul>
             {
-                productYyyoink.map((p: any) => (
+                productLark.map((p: any) => (
                     <Project name={p.name} desc={p.desc} link={p.link} />
                 ))
             }
