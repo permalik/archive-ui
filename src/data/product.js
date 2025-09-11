@@ -1,4 +1,4 @@
-export const productlark = [
+export const productLark = [
   {
     name: "lark web",
     desc: "LLM web",
